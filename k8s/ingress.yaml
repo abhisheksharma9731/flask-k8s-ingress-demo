@@ -1,20 +1,18 @@
-cat > k8s/ingress.yaml <<'EOF'
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: flask-ingress
+  name: flask-k8s-ingress-demo
   annotations:
-    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: flask-ingress.local
+    - host: flask.local
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: flask-service
+                name: flask-k8s-ingress-demo
                 port:
                   number: 80
-EOF
