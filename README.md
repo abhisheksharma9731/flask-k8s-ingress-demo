@@ -14,8 +14,8 @@ kubectl apply -f k8s/deployment.yaml
 kubectl apply -f k8s/service.yaml
 kubectl apply -f k8s/ingress.yaml
 
-# To access:
+#To access:
 MINIKUBE_IP=\$(minikube ip)
-# add to /etc/hosts: "<MINIKUBE_IP> flask-ingress.local"
-# then open: http://flask-ingress.local
+#add to /etc/hosts: "<MINIKUBE_IP> flask-ingress.local"
+#then open: http://flask-ingress.local
 EOF
