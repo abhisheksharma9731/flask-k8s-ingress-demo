@@ -1,4 +1,3 @@
-cat > .github/workflows/docker-build.yml <<'EOF'
 name: Build and Push Docker Image
 
 on:
@@ -32,4 +31,3 @@ jobs:
           context: .
           push: true
           tags: abhisheksharma9731/flask-k8s-ingress-demo:latest,abhisheksharma9731/flask-k8s-ingress-demo:${{ github.sha }}
-EOF
