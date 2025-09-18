@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: flask-k8s-ingress-demo
+  name: flask-k8s-ingress-demo-service
 spec:
   selector:
     app: flask-k8s-ingress-demo
@@ -9,5 +9,4 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 5000
-  type: ClusterIP
 

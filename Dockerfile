@@ -1,11 +1,11 @@
 # Use official lightweight Python image
-FROM python:3.10-slim
+FROM python:3.9-slim
 
 # Set working directory
 WORKDIR /app
 
 # Copy requirements file first (better caching)
-COPY requirements.txt .
+COPY requirements.txt requirements.txt
 
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
